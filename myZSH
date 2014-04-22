@@ -2,8 +2,16 @@
 #Maria Deslis : eternalearth888
 #ZSH Prompt
 
-#autoload -U promptinit
+setopt PROMPT_SUBST 
+
+#Autoloads
 autoload -U colors && colors
+autoload -Uz vcs_info
+
+#Setup VCS_INFO
+zstyle ':vcs_info:*' enable git hg
+zstyle ':vcs_info:*' formats "%s %r/%S %b %m%u%c"
+zstyle ':vcs_info:*' actionformats "%s %r/%S %b %m%u%c"
 
 #From : zirrostig
 #Easier Color Usage
@@ -18,8 +26,15 @@ red="%{$fg[red]%}"
 yellow="%{$fg[yellow]%}"
 magenta="%{$fg[magenta]%}"
 
-# PROMPT
-PROMPT="${cyan}%n${reset}${white}@${reset}${green}%M${reset}${magenta}%~${reset} "
-
 #LS Colorization
 alias ls="ls --color=auto"
+
+# Check for version control
+precmd() {
+	vcs_info
+}
+
+
+# PROMPT
+PROMPT="${cyan}%n${reset}${white}@${reset}${green}%M${reset}${magenta}${vcs_info_msg_0_}${reset} "
+

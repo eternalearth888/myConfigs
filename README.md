@@ -7,6 +7,9 @@ This is the repo I will be using to store my zsh prompt configs and anything els
 $ rm -rf ~/.zshrc
 $ ln -s /present/working/directory/myConfigs/myZSH ~/.zshrc
 
+- After everychange either do:
+	- source myZSH OR start a new terminal
+
 ## VIM Config
 
 $rm -rf ~/.vimrc
