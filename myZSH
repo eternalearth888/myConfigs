@@ -1,6 +1,10 @@
 #Maria Deslis : eternalearth888
 #ZSH Prompt
 
+
+#autoload -U promptinit
+autoload -U colors && colors
+
 #From : zirrostig
 #Easier Color Usage
 local reset white gray green red cyan blue yellow
@@ -14,7 +18,4 @@ red="%{$fg[red]%}"
 yellow="%{$fg[yellow]%}"
 
 # PROMPT
-PROMPT="${cyan}%n@%M~ "
-
-# RPROMPT
-
+PROMPT="${cyan}%n${reset}@${green}%M${reset}~ "
