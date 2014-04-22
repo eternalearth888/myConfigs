@@ -22,6 +22,7 @@ magenta="%{$fg[magenta]%}"
 alias ls="ls --color=auto"
 
 #Change symbol based on repo type
+#From : http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/#repository-types
 function prompt_char {
 	git branch >/dev/null 2>/dev/null && echo '±' && return
 	hg root >/dev/null 2>/dev/null && echo '☿' && return
