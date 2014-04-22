@@ -2,16 +2,8 @@
 #Maria Deslis : eternalearth888
 #ZSH Prompt
 
-setopt PROMPT_SUBST 
-
 #Autoloads
 autoload -U colors && colors
-autoload -Uz vcs_info
-
-#Setup VCS_INFO
-zstyle ':vcs_info:*' enable git hg
-zstyle ':vcs_info:*' formats "%s %r/%S %b %m%u%c"
-zstyle ':vcs_info:*' actionformats "%s %r/%S %b %m%u%c"
 
 #From : zirrostig
 #Easier Color Usage
@@ -29,12 +21,12 @@ magenta="%{$fg[magenta]%}"
 #LS Colorization
 alias ls="ls --color=auto"
 
-# Check for version control
-precmd() {
-	vcs_info
+#Change symbol based on repo type
+function prompt_char {
+	git branch >/dev/null 2>/dev/null && echo 'G' && return
+	hg root >/dev/null 2>/dev/null && echo 'M' && return
+	echo 'O'
 }
 
-
 # PROMPT
-PROMPT="${cyan}%n${reset}${white}@${reset}${green}%M${reset}${magenta}${vcs_info_msg_0_}${reset} "
-
+PROMPT="${cyan}%n${reset}${white}@${reset}${green}%M${reset}${magenta} $(prompt_char)${reset} "
