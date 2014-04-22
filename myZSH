@@ -20,3 +20,6 @@ magenta="%{$fg[magenta]%}"
 
 # PROMPT
 PROMPT="${cyan}%n${reset}${white}@${reset}${green}%M${reset}${magenta}%~${reset} "
+
+#LS Colorization
+alias ls="ls --color=auto"
