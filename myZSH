@@ -7,7 +7,7 @@ autoload -U colors && colors
 
 #From : zirrostig
 #Easier Color Usage
-local reset white gray green red cyan blue yellow
+local reset white gray green red cyan blue yellow magenta
 reset="%{${reset_color}%}"
 white="%{$fg[white]%}"
 gray="%{$fg[black]%}"
@@ -16,6 +16,7 @@ blue="%{$fg[blue]%}"
 cyan="%{$fg[cyan]%}"
 red="%{$fg[red]%}"
 yellow="%{$fg[yellow]%}"
+magenta="%{$fg[magenta]%}"
 
 # PROMPT
-PROMPT="${cyan}%n${reset}@${green}%M${reset}~ "
+$PROMPT="${cyan}%n${reset}@${green}%M${reset}${magenta}~${reset} "
