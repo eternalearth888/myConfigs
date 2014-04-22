@@ -1,6 +1,6 @@
+#!/bin/zsh
 #Maria Deslis : eternalearth888
 #ZSH Prompt
-
 
 #autoload -U promptinit
 autoload -U colors && colors
@@ -19,4 +19,4 @@ yellow="%{$fg[yellow]%}"
 magenta="%{$fg[magenta]%}"
 
 # PROMPT
-$PROMPT="${cyan}%n${reset}@${green}%M${reset}${magenta}~${reset} "
+PROMPT="${cyan}%n${reset}${white}@${reset}${green}%M${reset}${magenta}%~${reset} "
