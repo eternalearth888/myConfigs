@@ -23,9 +23,9 @@ alias ls="ls --color=auto"
 
 #Change symbol based on repo type
 function prompt_char {
-	git branch >/dev/null 2>/dev/null && echo 'G' && return
-	hg root >/dev/null 2>/dev/null && echo 'M' && return
-	echo 'O'
+	git branch >/dev/null 2>/dev/null && echo '±' && return
+	hg root >/dev/null 2>/dev/null && echo '☿' && return
+	echo '○'
 }
 
 # PROMPT
