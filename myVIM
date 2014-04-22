@@ -1,0 +1,29 @@
+"""""""""""""""""""""""""""""""
+" BASICS
+"""""""""""""""""""""""""""""""
+set number
+filetype plugin on
+set hlsearch
+set showmatch
+set mat=2
+
+""""""""""""""""""""""""""""""
+" COLORS AND FONTS
+""""""""""""""""""""""""""""""
+syntax on
+
+""""""""""""""""""""""""""""""
+" TABS AND SPACES
+""""""""""""""""""""""""""""""
+set tabstop=4
+set shiftwidth=4
+set ai "AUTO INDENT
+set wrap "WRAP LINES
+set si "SMART INDENT
+
+""""""""""""""""""""""""""""""
+" MAKE GNOME SUPPORT 256 COLORS
+""""""""""""""""""""""""""""""
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
