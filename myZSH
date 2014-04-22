@@ -1,0 +1,20 @@
+#Maria Deslis : eternalearth888
+#ZSH Prompt
+
+#From : zirrostig
+#Easier Color Usage
+local reset white gray green red cyan blue yellow
+reset="%{${reset_color}%}"
+white="%{$fg[white]%}"
+gray="%{$fg[black]%}"
+green="%{$fg[green]%}"
+blue="%{$fg[blue]%}"
+cyan="%{$fg[cyan]%}"
+red="%{$fg[red]%}"
+yellow="%{$fg[yellow]%}"
+
+# PROMPT
+PROMPT="${cyan}%n@%M~ "
+
+# RPROMPT
+
