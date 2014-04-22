@@ -14,3 +14,8 @@ $ ln -s /present/working/directory/myConfigs/myZSH ~/.zshrc
 
 $rm -rf ~/.vimrc
 $ln -s /present/working/directory/myConfigs/myVIM ~/.vimrc
+
+## Xdefaults
+
+$rm -rf ~/.Xdefaults
+$ln -s /present/working/directory/myConfigs/myXDefaults ~/.Xdefaults
