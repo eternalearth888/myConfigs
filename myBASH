@@ -1,0 +1,19 @@
+#!/bin/bash
+#Maria Deslis : eternalearth888
+
+# .bashrc
+
+alias gem=gem1.9.3
+alias ruby=ruby1.9.3
+alias rake=rake1.9.3
+export GEM_HOME=~/.gem
+export GEM_PATH=$GEM_HOME/bin
+export PATH=$GEM_PATH:$PATH
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+PS1='\[\e[1;36m\]\u\[\e[m\] \[\e[0;36m\]\w\[\e[m\] \[\e[0;35m\]\$ \[\e[m\]\[\e[0;37m\]'
